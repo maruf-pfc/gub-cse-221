@@ -1,0 +1,48 @@
+INCLUDE 'EMU8086.INC'
+
+.MODEL SMALL
+.DATA
+.CODE
+MAIN PROC
+    MOV AX, @DATA
+    MOV DS, AX       
+    
+    PRINT 'ENTER A NUMBER, MAIN: '
+    CALL SCAN_NUM                 
+    PRINTN ''
+    PUSH CX   
+    PRINTN 'BEFORE CALLING TEST'
+    MOV AX, CX
+    CALL PRINT_NUM   
+    PRINTN ''
+    
+    CALL TEST1                  
+    PRINTN 'AFTER CALLING TEST'
+    CALL PRINT_NUM
+    POP CX
+    MOV AX, CX    
+    PRINTN ''
+    CALL PRINT_NUM
+    
+    EXIT:
+        MOV AH, 4CH
+        INT 21H
+    
+MAIN ENDP
+
+TEST1 PROC
+    PRINTN 'WE ARE IN TEST PROCEDURE'
+    CALL SCAN_NUM
+    PRINT 'TEST: '
+    MOV AX, CX
+    CALL PRINT_NUM
+    PRINTN ''     
+    
+    RET
+   
+TEST1 ENDP       
+DEFINE_PRINT_NUM
+DEFINE_PRINT_NUM_UNS
+DEFINE_SCAN_NUM                 
+
+END MAIN

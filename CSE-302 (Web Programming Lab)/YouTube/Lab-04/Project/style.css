@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: hsl(0, 0%, 95%);
+  color: #ffffff;
+  background-image: url("https://wallpaperset.com/w/full/a/c/3/28696.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+h2 {
+  color: #eeeeee;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+a{
+  color: #ffffff;
+  text-decoration: none;
+}
+.container {
+  width: 50%;
+  margin: 15px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+}
+.container .left {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container .right {
+  width: 70%;
+}
+.avatar {
+  clip-path: polygon(100% 0, 100% 70%, 50% 100%, 0 70%, 0 0);
+  background-color: rgb(111, 111, 111);
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.avatar img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+}
+.container .right .title {
+  padding: 35px 0px;
+  background-color: rgb(111, 111, 111);
+  height: 140px;
+  color: white;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.contact div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.contact div svg {
+  height: 30px;
+  width: 30px;
+  border: 1px solid #363636;
+  padding: 5px;
+  border-radius: 50%;
+}
+.hr_left {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 10px 0;
+}
+.skills div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 90%;
+}
+.skills div label {
+  width: 100px;
+}
+.right .title h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.hr_right {
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+.experience ul,
+.projects ul {
+  padding: 10px 0;
+  margin-left: 30px;
+}

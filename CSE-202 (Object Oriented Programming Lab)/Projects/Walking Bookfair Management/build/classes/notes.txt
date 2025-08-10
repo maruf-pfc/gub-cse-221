@@ -1,0 +1,122 @@
+create database WalkingBookfairManagement;
+
+use WalkingBookfairManagement;
+
+create table Admin
+    (USER_ID VARCHAR(50) PRIMARY KEY,
+    NAME VARCHAR(50),
+    PASSWORD VARCHAR(50),
+    CONTACT VARCHAR(11));
+
+insert into Admin values ('maruf@gmail.com', 'Maruf Sarker', 'maruf', '01843579712');
+
+mysql> select * from Admin;
++-----------------+--------------+----------+-------------+
+| USER_ID         | NAME         | PASSWORD | CONTACT     |
++-----------------+--------------+----------+-------------+
+| maruf@gmail.com | Maruf Sarker | maruf    | 01843579712 |
++-----------------+--------------+----------+-------------+
+
+create table Books
+    (BOOK_ID VARCHAR(50) PRIMARY KEY,
+    CATEGORY VARCHAR(50),
+    BOOK_NAME VARCHAR(50),
+    AUTHOR VARCHAR(50),
+    QUANTITY VARCHAR(50));
+
+insert into Books values ('B001', 'C', 'C Programming', 'Dennis Ritchie', '10');
+insert into Books values ('B002', 'C++', 'C++ Primer', 'Stanley B. Lippman', '10');
+insert into Books values ('B003', 'Java', 'Head First Java', 'Kathy Sierra', '10');
+insert into Books values ('B004', 'Python', 'Python Crash Course', 'Eric Matthes', '10');
+insert into Books values ('B005', 'PHP', 'PHP and MySQL Web Development', 'Luke Welling', '10');
+insert into Books values ('B006', 'JavaScript', 'JavaScript and JQuery', 'Jon Duckett', '10');
+insert into Books values ('B007', 'HTML', 'HTML and CSS', 'Jon Duckett', '10');
+insert into Books values ('B008', 'CSS', 'CSS: The Missing Manual', 'David Sawyer McFarland', '10');
+insert into Books values ('B009', 'SQL', 'SQL in 10 Minutes', 'Ben Forta', '10');
+insert into Books values ('B010', 'Ruby', 'Learn to Program', 'Chris Pine', '10');
+insert into Books values ('B011', 'Swift', 'Swift Programming', 'Matthew Mathias', '10');
+insert into Books values ('B012', 'R', 'R for Data Science', 'Hadley Wickham', '10');
+insert into Books values ('B013', 'Go', 'The Go Programming Language', 'Alan A. A. Donovan', '10');
+insert into Books values ('B014', 'Perl', 'Learning Perl', 'Randal L. Schwartz', '10');
+insert into Books values ('B015', 'Assembly', 'Assembly Language Step-by-Step', 'Jeff Duntemann', '10');
+insert into Books values ('B016', 'Kotlin', 'Kotlin in Action', 'Dmitry Jemerov', '10');
+insert into Books values ('B017', 'Scala', 'Programming in Scala', 'Martin Odersky', '10');
+insert into Books values ('B018', 'Rust', 'Programming Rust', 'Jim Blandy', '10');
+insert into Books values ('B019', 'D', 'The D Programming Language', 'Andrei Alexandrescu', '10');
+insert into Books values ('B020', 'Haskell', 'Learn You a Haskell for Great Good!', 'Miran Lipovača', '10');
+
+
+
+mysql> select * from Books;
++---------+------------+-------------------------------------+------------------------+----------+
+| BOOK_ID | CATEGORY   | BOOK_NAME                           | AUTHOR                 | QUANTITY |
++---------+------------+-------------------------------------+------------------------+----------+
+| B001    | C          | C Programming                       | Dennis Ritchie         | 10       |
+| B002    | C++        | C++ Primer                          | Stanley B. Lippman     | 10       |
+| B003    | Java       | Head First Java                     | Kathy Sierra           | 10       |
+| B004    | Python     | Python Crash Course                 | Eric Matthes           | 10       |
+| B005    | PHP        | PHP and MySQL Web Development       | Luke Welling           | 10       |
+| B006    | JavaScript | JavaScript and JQuery               | Jon Duckett            | 10       |
+| B007    | HTML       | HTML and CSS                        | Jon Duckett            | 10       |
+| B008    | CSS        | CSS: The Missing Manual             | David Sawyer McFarland | 10       |
+| B009    | SQL        | SQL in 10 Minutes                   | Ben Forta              | 10       |
+| B010    | Ruby       | Learn to Program                    | Chris Pine             | 10       |
+| B011    | Swift      | Swift Programming                   | Matthew Mathias        | 10       |
+| B012    | R          | R for Data Science                  | Hadley Wickham         | 10       |
+| B013    | Go         | The Go Programming Language         | Alan A. A. Donovan     | 10       |
+| B014    | Perl       | Learning Perl                       | Randal L. Schwartz     | 10       |
+| B015    | Assembly   | Assembly Language Step-by-Step      | Jeff Duntemann         | 10       |
+| B016    | Kotlin     | Kotlin in Action                    | Dmitry Jemerov         | 10       |
+| B017    | Scala      | Programming in Scala                | Martin Odersky         | 10       |
+| B018    | Rust       | Programming Rust                    | Jim Blandy             | 10       |
+| B019    | D          | The D Programming Language          | Andrei Alexandrescu    | 10       |
+| B020    | Haskell    | Learn You a Haskell for Great Good! | Miran Lipovača         | 10       |
++---------+------------+-------------------------------------+------------------------+----------+
+
+
+create table User
+    (USER_ID VARCHAR(50) PRIMARY KEY,
+    NAME VARCHAR(50),
+    CONTACT VARCHAR(11));
+
+insert into User values ('U001', 'Maruf Sarker', '01843579712');
+insert into User values ('U002', 'Rakibul Islam', '01847163702');
+insert into User values ('U003', 'Sakib Islam', '01847116557');
+insert into User values ('U004', 'Asif Ahmed', '01847807949');
+insert into User values ('U005', 'Lisan Islam', '01839753310');
+insert into User values ('U006', 'Shohag Khan', '01874400682');
+insert into User values ('U007', 'Fartin Fuad', '01860247698');
+insert into User values ('U008', 'Mahady Hasan Fahim', '01897034155');
+insert into User values ('U009', 'Tamim Iqbal', '01841338168');
+insert into User values ('U010', 'Shanta Islam', '01816160634');
+insert into User values ('U011', 'Md. Sohel', '01899593719');
+insert into User values ('U012', 'Meherun Nesa Enta', '01816107809');
+insert into User values ('U013', 'Jabed Hasan', '01878973640');
+insert into User values ('U014', 'Tanvir Ahmed', '01867644945');
+insert into User values ('U015', 'Md. Labib', '01815455966');
+
+mysql> select * from User;
++---------+--------------------+-------------+
+| USER_ID | NAME               | CONTACT     |
++---------+--------------------+-------------+
+| L001    | Maruf Sarker       | 01843579712 |
+| L002    | Rakibul Islam      | 01847163702 |
+| L003    | Sakib Islam        | 01847116557 |
+| L004    | Asif Ahmed         | 01847807949 |
+| L005    | Lisan Islam        | 01839753310 |
+| L006    | Shohag Khan        | 01874400682 |
+| L007    | Fartin Fuad        | 01860247698 |
+| L008    | Mahady Hasan Fahim | 01897034155 |
+| L009    | Tamim Iqbal        | 01841338168 |
+| L010    | Shanta Islam       | 01816160634 |
+| L011    | Md. Sohel          | 01899593719 |
+| L012    | Meherun Nesa Enta  | 01816107809 |
+| L013    | Jabed Hasan        | 01878973640 |
+| L014    | Tanvir Ahmed       | 01867644945 |
+| L015    | Md. Labib          | 01815455966 |
++---------+--------------------+-------------+
+
+create database WalkingBookfairManagement;
+reaname table WalkingLibraryManagement.Admin to WalkingBookfairManagement.Admin;
+reaname table WalkingLibraryManagement.Books to WalkingBookfairManagement.Books;
+reaname table WalkingLibraryManagement.Librarian to WalkingBookfairManagement.Librarian;

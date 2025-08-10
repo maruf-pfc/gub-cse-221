@@ -1,0 +1,19 @@
+msg1 db 'Hello World $'
+msg2 db 'H', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd', '$'
+msg3 db 40H, 45H, 4CH, 4CH, 4FH, 20H, 5AH, 4FH, 52H, 4CH, 44H, '$'
+
+V1 DW 5 DUP(9) ; 9, 5 bar duplicate hobe
+v2 DW 9, 9, 9, 9, 9
+V3 DW 5 DUP(1, 2)
+V4 DW 1,2, 1,2, 1,2, 1,2, 1,2
+V5 DW 100 DUP(0)
+
+SI/DI --> Index Register
+
+arr[3] = 'H' --> almost all programming language
+but in emu8086,
+
+let assume, we wanna replace the 3rd index value to p 
+so, 
+mov SI, 3
+mov arr[SI], 'p'

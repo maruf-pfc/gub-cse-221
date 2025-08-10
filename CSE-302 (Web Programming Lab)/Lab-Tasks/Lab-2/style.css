@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: azure;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+div{
+    width: 100vw;
+    height: 100vh;
+}
+
+table, tr, td{
+    border-collapse: collapse;
+    padding: 4px;
+}
+
+table{
+    margin: 0 auto;
+}
+
+caption{
+    background-color: greenyellow;
+}
+
+td{
+    background-color: burlywood;
+}
+
+th{
+    background-color: black;
+    color: white;
+}

@@ -1,0 +1,8 @@
+((A + B) - C * (D / E)) + F
+=> AB+CDE/*-F+
+
+CLP Question
+Debug me the stack lecture sheet 1
+
+Also solve this problem
+A + B * C + D

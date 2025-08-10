@@ -1,0 +1,5 @@
+1. Write a C Program to Calculate Area of a Square, take length of one side as user input.
+
+2. Write a C program to enter temperature in Fahrenheit(°F) and convert it into Celsius(°C).
+
+3. Write a C program to enter marks of five subjects and calculate total and average marks.

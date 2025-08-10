@@ -1,0 +1,10 @@
+sudo docker run --name oracle-db -p 7000:7000 -p 1521:1521 \
+  -e ORACLE_SID=ORCLCDB \
+  -e ORACLE_PDB=ORCLPDB1 \
+  -e ORACLE_PWD=oracle \
+  dockerhelp/docker-oracle-ee-18c \
+  bash -c "/bin/bash /post_install.sh && \
+           echo 'alter session set \"_ORACLE_SCRIPT\"=true;' | sqlplus sys/oracle as sysdba && \
+           echo 'create user TEST identified by 1234;' | sqlplus sys/oracle as sysdba && \
+           echo 'grant dba to TEST;' | sqlplus sys/oracle as sysdba && \
+           tail -f /dev/null"

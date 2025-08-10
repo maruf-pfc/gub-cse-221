@@ -1,0 +1,99 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  height: 90vh;
+
+  .item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+
+      input {
+        padding: 20px;
+        border: none;
+        border-radius: 5px;
+        width: 300px;
+        outline: none;
+        background-color: rgb(17, 25, 40);
+        color: #fff;
+        border-radius: 5px;
+      }
+
+      label {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        text-decoration: underline;
+
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 10px;
+          object-fit: cover;
+        }
+      }
+
+      .signIn,
+      .signUp {
+        width: 100%;
+        padding: 20px;
+        border: none;
+        background-color: dodgerblue;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: 500;
+
+        &:disabled {
+          background-color: #7f7f7f;
+          cursor: not-allowed;
+        }
+      }
+
+      p {
+        margin-right: 10px;
+        button {
+          background-color: transparent;
+          border: none;
+          color: dodgerblue;
+          cursor: pointer;
+          font-weight: 500;
+          text-decoration: underline;
+        }
+      }
+
+      .register {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        color: #fff;
+        font-weight: 500;
+        cursor: pointer;
+
+        a {
+          color: dodgerblue;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .separator {
+    height: 80%;
+    width: 2px;
+    background-color: #828282;
+  }
+}

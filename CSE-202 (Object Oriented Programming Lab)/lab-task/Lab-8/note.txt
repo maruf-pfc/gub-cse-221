@@ -1,0 +1,10 @@
+Exceptions
+
+- ArithmeticException
+- NullPointerException
+- NumberFormatException
+- ArrayIndexOutOfBoundsException
+- StringIndexOutOfBoundsException
+
+
+Java Access Modifiers With Examples - HW

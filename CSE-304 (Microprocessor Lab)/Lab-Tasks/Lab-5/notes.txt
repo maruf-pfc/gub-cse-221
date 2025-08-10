@@ -1,0 +1,7 @@
+- unconditional jump -> jmp
+- conditional jump
+- Loop
+- Compare
+- Flags
+- procedure
+- level

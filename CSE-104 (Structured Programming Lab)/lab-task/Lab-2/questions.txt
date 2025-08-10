@@ -1,0 +1,17 @@
+1. Take the base and heigh of a triangle and calculate its area.
+
+2. Take the radius of a circle and calculate area and cicumsference.
+
+3. Take 2 numbers from user. Find sum, sub, product, division between the 2 number.
+
+4. Take today's temperature(in degree celsius) from user. Convert it into fahrenheit.
+
+5. Take a two digit number from user. Print the reverse of the number.
+
+6. take an employee's salary as input(int BDT). Convert it into USD.
+
+7. Swap the values of the variables with/without using any third variable.
+
+8. Find the roots of a quardratic equation(ax^2 + bx + c = 0)
+
+9. Find the linear distance between two points in a cartesian coordinate system

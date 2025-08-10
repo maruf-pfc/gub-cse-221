@@ -1,0 +1,29 @@
+@relation weather
+
+@attribute outlook numeric
+@attribute temperature numeric
+@attribute humidity numeric
+@attribute windy {TRUE,FALSE}
+@attribute play {yes,no}
+
+@data
+0,85,85,FALSE,no
+0,80,90,TRUE,no
+1,83,78,FALSE,yes
+2,70,96,FALSE,yes
+2,68,80,FALSE,yes
+2,65,70,TRUE,no
+1,64,65,TRUE,yes
+0,72,95,FALSE,no
+0,69,70,FALSE,yes
+2,75,80,FALSE,yes
+0,75,70,TRUE,yes
+1,72,90,TRUE,yes
+1,81,75,FALSE,yes
+2,71,91,TRUE,no
+0,81,85,TRUE,no
+1,90,75,FALSE,yes
+2,65,95,FALSE,yes
+1,72,85,FALSE,yes
+2,69,80,TRUE,no
+0,68,90,TRUE,no

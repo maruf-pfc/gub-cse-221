@@ -1,0 +1,13 @@
+Prim's algorithm is a graph search algorithm that finds a minimum spanning tree for a weighted undirected graph. This means it finds a subset of the edges that forms a tree that includes every vertex, where the total weight of all the edges in the tree is minimized.
+
+Here is how the algorithm works:
+
+    Initialize a tree with a single vertex, chosen arbitrarily from the graph.
+    Grow the tree by adding edges:
+        Consider all the edges that connect the tree to vertices not yet in the tree.
+        Choose the edge with the smallest weight that connects the tree to a vertex not yet in the tree, and add it to the tree.
+        Repeat this step until all vertices are in the tree.
+
+The resulting tree is a minimum spanning tree.
+
+Prim's algorithm is similar to Dijkstra's algorithm, which is used for finding the shortest path between two vertices in a graph. However, Dijkstra's algorithm is used on a directed graph, while Prim's algorithm is used on an undirected graph.

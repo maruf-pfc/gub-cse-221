@@ -1,0 +1,34 @@
+// start docker
+sudo docker run -p 7000:7000 -p 1521:1521 -it dockerhelp/docker-oracle-ee-18c bash 
+
+// install database
+sh post_install.sh
+
+// run it
+sqlplus
+
+// login
+USER: sys as sysdba
+PASS: oracle
+
+// create a test user
+alter session set "_ORACLE_SCRIPT"=true;
+create user TEST identified by 1234;
+grant dba to TEST;
+
+
+
+
+
+
+
+// find image name
+sudo docker ps
+
+"strange_turing"
+
+// start an existing container in docker
+sudo docker start strange_turing
+sudo docker exec -it strange_turing bash
+sh post_install.sh
+sqlplus

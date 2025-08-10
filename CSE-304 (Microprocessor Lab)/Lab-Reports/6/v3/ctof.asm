@@ -1,0 +1,38 @@
+INCLUDE 'EMU8086.INC'
+.MODEL SMALL
+.STACK 100H
+
+.DATA
+    TMP DW ?
+.CODE
+MAIN PROC
+    MOV AX, @DATA
+    MOV DS, AX
+
+    ; °C = ((9 / 5) * °C) + 32
+    ; => °C * 9 / 5 + 32
+    PRINT 'Celsius (°C) - '
+    CALL SCAN_NUM
+
+    MOV AX, CX
+
+    ; CONVERTING TO FAHRENHEIT
+    MOV BX, 9
+    MUL BX
+    MOV BX, 5
+    DIV BX
+    ADD AX, 32
+
+    ; PRINTING RESULT
+    PRINTN ''
+    PRINT 'Fahrenheit (°F) - '
+    MOV TMP, AX
+    CALL PRINT_NUM_UNS
+    PRINT '°C'
+
+    MOV AH, 4CH
+    INT 21H
+DEFINE_SCAN_NUM
+DEFINE_PRINT_NUM
+DEFINE_PRINT_NUM_UNS
+END MAIN

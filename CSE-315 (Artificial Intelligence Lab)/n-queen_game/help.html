@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N-Queen Challenge - Help</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: #2d2d44;
+            color: white;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1,
+        h2 {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .algorithm {
+            background: #1e1e2f;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        code {
+            color: #2ecc71;
+            font-family: 'Courier New', monospace;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-button {
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+
+        .nav-button:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button class="nav-button" onclick="window.location.href='index.html'">← Back to Game</button>
+
+        <h1>N-Queens Challenge Guide</h1>
+
+        <div class="section">
+            <h2>Game Rules</h2>
+            <p>The objective is to place N queens on an N×N chessboard such that:</p>
+            <ul>
+                <li>No two queens attack each other</li>
+                <li>Queens cannot share:
+                    <ul>
+                        <li>Same row</li>
+                        <li>Same column</li>
+                        <li>Same diagonal</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>How to Play</h2>
+            <ol>
+                <li>Click on any cell to place a queen</li>
+                <li>Conflicting cells will be automatically disabled</li>
+                <li>Complete the board without conflicts to win</li>
+                <li>Progress through 5 difficulty levels (4x4 to 8x8)</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Solving Strategy</h2>
+            <div class="algorithm">
+                <h3>Backtracking Algorithm</h3>
+                <p>The optimal solution uses recursive backtracking:</p>
+                <code>
+                    function solveNQueens(n) {<br>
+                    &nbsp;&nbsp;const board = new Array(n).fill().map(() => new Array(n).fill(0));<br>
+                    &nbsp;&nbsp;function isSafe(row, col) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;// Check column and diagonals<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;for (let i = 0; i < row; i++) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (board[i][col] || <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(col - (row - i) >= 0 && board[i][col - (row - i)]) || <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(col + (row - i) < n && board[i][col + (row - i)])) return false;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;return true;<br>
+                    &nbsp;&nbsp;}<br>
+                    &nbsp;&nbsp;// Recursive placement logic...<br>
+                    }
+                </code>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Learning Resources</h2>
+            <ul>
+                <li><a href="https://en.wikipedia.org/wiki/Eight_queens_puzzle" target="_blank">Wikipedia: N-Queens
+                        Problem</a></li>
+                <li><a href="https://www.geeksforgeeks.org/n-queen-problem-backtracking-3/"
+                        target="_blank">GeeksforGeeks: Backtracking Solution</a></li>
+                <li><a href="https://leetcode.com/problems/n-queens/" target="_blank">LeetCode Challenge</a></li>
+                <li><a href="https://www.youtube.com/watch?v=xFv_Hl4B83A" target="_blank">Algorithm Visualization
+                        (YouTube)</a></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Tips & Strategies</h2>
+            <ul>
+                <li>Start placing queens from the first row</li>
+                <li>Use the automatic conflict highlighting to plan moves</li>
+                <li>If stuck, restart and try different initial positions</li>
+                <li>Remember queens attack in all 8 diagonal directions</li>
+            </ul>
+        </div>
+
+        <button class="nav-button" onclick="window.location.href='index.html'">← Back to Game</button>
+    </div>
+</body>
+
+</html>

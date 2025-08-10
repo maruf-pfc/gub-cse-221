@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #F2F899;
+    background-image: url('https://archive-site.green.edu.bd/wp-content/uploads/2017/08/Logo.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 100vh;
+}
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: green;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.h{
+    font-size: 30px;
+}
+h2{
+    color: yellow;
+    text-decoration: underline;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+}
+
+table{
+    margin-top: 20px;
+}
+
+table, th, td{
+    border-collapse: collapse;
+    border: 3px dashed black;
+    /* border-style: dashed;
+    border-color: black;
+    border-width: 3px; */
+}
+
+th, td{
+    padding: 10px 20px;
+}
+
+.id{
+    color: blue;
+}
+
+.row1{
+    background-color: #EE82EE;
+}
+.row2{
+    background-color: #87CEEB;
+}

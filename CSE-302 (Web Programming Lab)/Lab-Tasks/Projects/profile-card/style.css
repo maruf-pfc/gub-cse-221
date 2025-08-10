@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+*{
+    margin: 0;
+    bottom: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family: "Poppins", sans-serif;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    width: 400px;
+    height: 500px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.card .top{
+    background-color: dodgerblue;
+    width: 100%;
+    height: 30%;
+    padding: 10px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.card .top img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: -140px;
+    border: 2px solid white;
+    object-fit: fill;
+}
+
+.card .bottom .info{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.card .bottom h2{
+    font-size: 20px;
+}
+
+.card .bottom p{
+    font-size: 14px;
+}
+
+.card .bottom .social{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .bottom .social img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.card .bottom .buttons{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.card .bottom .buttons button{
+    background-color: rgb(18, 119, 219);
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+}
+
+.card .bottom .actions{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+hr{
+    width: 10px;
+    transform: rotate(90deg);
+    padding-left: 5px;
+    padding-right: 5px;
+}

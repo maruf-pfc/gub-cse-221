@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>N-Queen Challenge</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+  <div class="level-selector" id="levelSelector">
+    <div>
+      <h3>Level Progress</h3>
+      <div id="levelList"></div>
+      <button id="resetLevelsBtn" onclick="confirmResetLevels()">Reset All Levels</button>
+    </div>
+    <div class="help">
+      <ul>
+        <li><a href="help.html">Need Help ?</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="game-container">
+    <div class="header">
+      <h1>N-Queen Challenge</h1>
+      <div id="level">Level 1</div>
+      <div id="queenCounter">Queens Placed: 0 / 0</div>
+      <div class="btn-group">
+        <button onclick="confirmRestart()"><i class="fa-solid fa-power-off"></i>Restart</button>
+        <button onclick="undoMove()"><i class="fas fa-undo"></i>Undo</button>
+      </div>
+    </div>
+    <div id="board"></div>
+    <div id="message"></div>
+  </div>
+
+  <!-- Custom Alert Modal -->
+  <div id="customAlert" class="custom-alert-overlay" style="display:none;">
+    <div class="custom-alert-box" id="customAlertBox">
+      <div id="customAlertMessage"></div>
+      <button onclick="closeCustomAlert()">OK</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

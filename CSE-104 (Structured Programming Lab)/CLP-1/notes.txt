@@ -1,0 +1,26 @@
+/*
+Extra Class - 3 September, 2022[Offline] (3:00pm - 6:00pm)
+
+Lab Final - 13 September, 2022[Offline]
+Project Presentation - 25 September, 2022[Online]
+
+25 Marks
+Implementation - 20 marks
+Report - 5 marks
+
+- idea
+- topics covered
+*/
+
+
+// CLP Questions
+
+// Insert N items in an array. Find the followings:
+    // Check if there is any duplicate element present in the array
+    // Count total even/odd elements of the array.
+
+// Take an integer number (2 <=x <= 10000) from user. Find the followings:
+    // sum of digits of the number
+    // Next prime number after the given number
+
+// Write a C program to swap the values of two variables without using a temporary variable.

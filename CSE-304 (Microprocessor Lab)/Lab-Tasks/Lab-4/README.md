@@ -1,0 +1,13 @@
+ADD
+SUB
+INC
+DEC
+MUL
+DIV
+AND
+OR
+NOT
+XOR
+
+Array / String
+Header

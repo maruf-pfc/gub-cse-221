@@ -1,0 +1,43 @@
+.container {
+    position: relative;
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+}
+
+.static {
+    background-color: #3498db;
+    position: static;
+}
+
+.relative {
+    background-color: #e74c3c;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.absolute {
+    background-color: #2ecc71;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+
+.fixed {
+    background-color: #f1c40f;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}

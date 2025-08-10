@@ -1,0 +1,13 @@
+Kruskal's algorithm is a graph search algorithm that finds a minimum spanning tree for a weighted undirected graph. This means it finds a subset of the edges that forms a tree that includes every vertex, where the total weight of all the edges in the tree is minimized.
+
+Here is how the algorithm works:
+
+    Sort the edges of the graph by weight, in ascending order.
+    Initialize a tree with a single vertex, chosen arbitrarily from the graph.
+    Add edges to the tree, one at a time, in order of ascending weight:
+        For each edge, check whether adding the edge to the tree would create a cycle. If it would create a cycle, discard the edge. If it would not create a cycle, add the edge to the tree.
+        Repeat this step until all vertices are in the tree.
+
+The resulting tree is a minimum spanning tree.
+
+Kruskal's algorithm is similar to Prim's algorithm, which is also used for finding a minimum spanning tree in a graph. The main difference between the two algorithms is that Prim's algorithm grows the tree from a single vertex, while Kruskal's algorithm adds edges to the tree in order of ascending weight.

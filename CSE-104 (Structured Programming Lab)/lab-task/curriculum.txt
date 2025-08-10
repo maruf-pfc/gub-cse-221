@@ -1,0 +1,9 @@
+attendence ==> 10
+
+Lab report ==> 10
+
+Continuous Assessment ==> 25
+
+Project ==> 25(20+5)
+
+Lab Final ==> 30

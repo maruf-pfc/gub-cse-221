@@ -1,0 +1,22 @@
+Inheritance
+
+super / base / parent class
+sub /  child / derived class
+
+Types of Inheritance:
+1. Single Inheritance (1 super class, 1 sub class)
+2. Hierarchical Inheritance (1 super classes, multiple sub classes)
+3. Multilevel Inheritance (1 grand super class, multiple super classes, multiple sub classes)
+4. multiple Inheritance (multiple super classes, 1 sub classes)
+
+
+
+1.
+Create a rectangle class which has 2 variable length and width, and a method to calculate the area.
+Use a constructor to initialize the variables.
+Take 2 input from user in the main class and pass them to the constructor.
+
+Expand the previous class with another variable height, and a method to calculate volume. Add another constructor which takes 3 parameters length, width, height
+
+2.
+Write a program which has two classes. First class is rectangle which has two private variable height and width and three functions get_height, get_width and set_value. Another class is Area. Which has a function calc_area which takes an object of rectangle as input. Calculate area and return the value. Print the area in main function. Height and Width will be given by user in main function.

@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --danger-color: #e74c3c;
+    --success-color: #2ecc71;
+}
+
+* {
+    text-decoration: none;
+    list-style: none;
+
+    font-family: "Cinzel Decorative", serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    /* font-family: 'Arial Rounded MT Bold', Arial, sans-serif; */
+    background: linear-gradient(135deg, #1e1e2f 0%, #2d2d44 100%);
+    color: white;
+}
+
+
+.level-selector {
+    width: 200px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-right: 2px solid var(--secondary-color);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.level-item {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.level-item.completed {
+    background: var(--success-color);
+    transform: translateX(10px);
+}
+
+.level-item.current {
+    background: var(--secondary-color);
+    box-shadow: 0 0 15px var(--secondary-color);
+}
+
+.game-container {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#board {
+    display: grid;
+    gap: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.cell:hover {
+    background: #111;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.blocked {
+    background-color: rgba(120, 120, 120, 0.6);
+    /* pointer-events: none; */
+    cursor: not-allowed;
+}
+
+#queenCounter {
+    font-size: 18px;
+    margin-top: 10px;
+    color: var(--secondary-color);
+    text-shadow: 0 0 5px var(--secondary-color);
+}
+
+.blocked:hover {
+    background-color: rgba(120, 120, 120, 0.6);
+    transform: none;
+}
+
+.queen {
+    color: var(--primary-color);
+}
+
+#message {
+    font-size: 24px;
+    margin: 20px;
+    text-align: center;
+    min-height: 40px;
+}
+
+#queenCounter {
+    font-size: 18px;
+    margin-top: 10px;
+    color: var(--secondary-color);
+    text-shadow: 0 0 5px var(--secondary-color);
+}
+
+.game-over {
+    color: var(--danger-color);
+    animation: shake 0.5s;
+}
+
+#resetLevelsBtn {
+    background-color: var(--danger-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    width: 100%;
+    margin-left: 0PX;
+}
+
+#resetLevelsBtn:hover {
+    background-color: #c0392b;
+}
+
+.help ul {
+    padding: 0;
+}
+
+.help a {
+    color: #ddd;
+    font-size: 12px;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(10px);
+    }
+
+    50% {
+        transform: translateX(-10px);
+    }
+
+    75% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    text-shadow: 0 0 10px var(--secondary-color);
+}
+
+.btn-group {
+    margin-top: 10px;
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+}
+
+button i {
+    margin-right: 6px;
+}
+
+/* Custom Alert Styles */
+.custom-alert-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.custom-alert-box {
+    background: #222;
+    color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #000;
+    text-align: center;
+    min-width: 250px;
+}
+
+.custom-alert-box button {
+    margin-top: 20px;
+    background: var(--secondary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}

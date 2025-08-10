@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <div>
+            <input type="image" src="https://icons.veryicon.com/png/o/miscellaneous/two-color-icon-library/user-286.png" height="100" width="100">
+        </div>
+        <div>
+            <label for="name">Student Name: </label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        <div>
+            <label for="s_id">Student ID: </label>
+            <input type="number" id="s_id" name="s_id" placeholder="0000000000" required>
+        </div>
+        <div>
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div>
+            <label for="username">Username: </label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        </div>
+        <div>
+            <label for="password">Password: </label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <div>
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+        <div>
+            <label for="gender">Gender: </label>
+            <input type="radio" name="gender"> <span>Male</span>
+            <input type="radio" name="gender"> <span>Female</span>
+            <input type="radio" name="gender"> <span>Others</span>
+        </div>
+        <div>
+            <label for="lang">Language: </label>
+            <input type="checkbox" name="bengali"> <span>Bengali</span>
+            <input type="checkbox" name="english"> <span>English</span>
+            <input type="checkbox" name="hindi"> <span>Hindi</span>
+        </div>
+        <div>
+            <label for="district">District: </label>
+            <select name="district" id="district">
+                <option value="">Select District</option>
+                <option value="dhaka">Dhaka</option>
+                <option value="chittagong">Chittagong</option>
+                <option value="sylhet">Sylhet</option>
+                <option value="rajshahi">Rajshahi</option>
+                <option value="khulna">Khulna</option>
+                <option value="barishal">Barishal</option>
+                <option value="rangpur">Rangpur</option>
+                <option value="mymensingh">Mymensingh</option>
+            </select>
+        </div>
+        <div>
+            <label for="address">Address</label>
+            <textarea name="address" id="address" cols="30" rows="3" placeholder="Enter your address" style="resize: none;"></textarea>
+        </div>
+        <div>
+            <label for="profile_pic">Profile Picture: </label>
+            <input type="file" id="profile_pic" name="profile_pic">
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+</body>
+</html>
