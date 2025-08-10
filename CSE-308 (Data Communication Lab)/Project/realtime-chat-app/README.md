@@ -1,4 +1,4 @@
-# Real Time Chat Application 
+# Real Time Chat Application
 
 This is a real time chat application using
 
@@ -33,7 +33,7 @@ This is a real time chat application using
 - Create a .env file in the root directory and add the following
 
 ```md
-VITE_API_KEY = AIzaSyDb1hG0EYeL2HHkikA_Gd-PhiJqT_c1s-Y
+VITE_API_KEY = 
 ```
 
 - Run `npm run dev`
@@ -52,4 +52,4 @@ VITE_API_KEY = AIzaSyDb1hG0EYeL2HHkikA_Gd-PhiJqT_c1s-Y
 
 ## Live Demo
 
-[Click here](https://mms-realtime-chat-app.vercel.app/)
+![Click here](https://mms-realtime-chat-app.vercel.app/)
