@@ -48,17 +48,20 @@ df = df.drop('num', axis=1)
 # Separate features by data type
 categorical_features = df.select_dtypes(include=['object']).columns
 numerical_features = df.select_dtypes(include=np.number).drop('target', axis=1).columns
-
+print("Categorical Features")
+print(categorical_features)
+print("Numerical Features")
+print(numerical_features)
 # Handle missing values (Imputation)
 # For numerical features, fill with the median
 for col in numerical_features:
-    median_val = df[col].median()
-    df[col].fillna(median_val, inplace=True)
+    median = df[col].median()
+    df[col].fillna(median, inplace=True)
 
 # For categorical features, fill with the mode (most frequent value)
 for col in categorical_features:
-    mode_val = df[col].mode()[0]
-    df[col].fillna(mode_val, inplace=True)
+    mode = df[col].mode()[0]
+    df[col].fillna(mode, inplace=True)
 
 print("\nMissing values handled.")
 print(f"Total missing values after cleaning: {df.isnull().sum().sum()}") # Should be 0
