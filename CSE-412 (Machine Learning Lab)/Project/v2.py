@@ -1,5 +1,7 @@
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
@@ -22,11 +24,10 @@ print("\nDataset Information:")
 df.info()
 print("\nStatistical Summary:")
 print(df.describe())
-print("\nMissing values in each column:")
+print("\nMissing values in each column")
 print(df.isnull().sum())
 
 df = df.drop(['id', 'dataset'], axis=1)
-
 df['target'] = (df['num'] > 0).astype(int)
 df = df.drop('num', axis=1)
 
@@ -48,6 +49,23 @@ for col in categorical_features:
 
 print(f"Total missing values after cleaning: {df.isnull().sum().sum()}")
 
+# Plot 1: Distribution of the target variable
+plt.figure(figsize=(8, 6))
+sns.countplot(x='target', data=df)
+plt.title('Distribution of Heart Disease (0 = No Disease, 1 = Disease)')
+plt.xlabel('Heart Disease')
+plt.ylabel('Patient Count')
+plt.xticks([0, 1], ['No Disease', 'Has Disease'])
+plt.show()
+
+# Plot 2: Correlation heatmap for numerical features
+plt.figure(figsize=(12, 10))
+correlation_df = df[list(numerical_features) + ['target']]
+sns.heatmap(correlation_df.corr(), annot=True, cmap='coolwarm', fmt='.2f')
+plt.title('Correlation Matrix of Numerical Features')
+plt.show()
+
+# One-Hot Encoding
 df = pd.get_dummies(df, columns=categorical_features, drop_first=True)
 
 X = df.drop('target', axis=1)
@@ -73,6 +91,11 @@ print(f"Model Accuracy: {accuracy * 100:.2f}%")
 print("\nClassification Report:")
 print(classification_report(y_test, y_pred))
 
-print("\nConfusion Matrix")
+# Plot 3: Confusion Matrix Heatmap
 cm = confusion_matrix(y_test, y_pred)
-print(cm)
+plt.figure(figsize=(8, 6))
+sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=['No Disease', 'Has Disease'], yticklabels=['No Disease', 'Has Disease'])
+plt.title('Confusion Matrix')
+plt.xlabel('Predicted Label')
+plt.ylabel('True Label')
+plt.show()
