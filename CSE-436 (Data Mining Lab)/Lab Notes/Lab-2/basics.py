@@ -121,3 +121,16 @@ ls = [2, 3, 1]
 sorted_list = sorted(ls, reverse=True)
 print("Sorted in reverse order (new list):", sorted_list)
 
+# remove last space of a list
+l = [1,2,3,4,5]
+m = [str(i) for i in l]
+temp = ' '.join(m)
+print(temp)
+
+# zipping in python
+p = ['a', 'b', 'c']
+q = ['l', 'm', 'n']
+for i, j in zip(p, q):
+  print(i, j, end=' ')
+# a l b m c n
+
