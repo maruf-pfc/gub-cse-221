@@ -35,8 +35,12 @@ Third Year
 
 Fourth Year
 
-    CSE-315 (Artificial Intelligence Lab)
+    CSE-315 (Artificial Intelligence)
+    CSE-316 (Artificial Intelligence Lab)
+    CSE-411 (Machine Learning)
     CSE-412 (Machine Learning Lab)
+    CSE-435 (Data Mining)
+    CSE-436 (Data Mining Lab)
 
 ## 💡 How to Use This Repository
 
