@@ -47,6 +47,7 @@ OLAP অপারেশন (উদাহরণসহ): roll-up (aggregation: দ
 ## 3. KDD Steps (7 steps) — In-depth + Techniques + Examples
 
 List & Explain:
+
 1. Data Cleaning: missing value handling (mean/mode/median imputation, k-NN imputation), noise removal (smoothing, binning), outlier detection (z-score, IQR).
 2. Data Integration: schema matching, resolving entity IDs, conflict handling, deduplication.
 3. Data Selection: choosing relevant attributes, instances, time windows. E.g., select last 12 months transactions.
@@ -54,13 +55,14 @@ List & Explain:
 5. Data Mining: choose algorithms (decision trees, SVM, k-means, Apriori, FP-Growth), parameter selection, cross-validation.
 6. Pattern Evaluation: objective measures (accuracy, precision/recall, support/confidence/lift), statistical tests (chi-square, p-value), remove redundant patterns.
 7. Knowledge Presentation: visualization (bar/line/heatmap), reports, rule lists, executive summaries; deploy models (APIs, dashboards).
-Concrete example (E-commerce): show mapping — cleaning → integrate CRM + transactions → select active customers → transform to RFM → PCA/feature selection → cluster (k-means) → association mining (Apriori) per cluster → evaluate lift & significance → present top-10 actionable rules in dashboard.
-Exam Q (10 marks): Explain the 7 KDD steps and give one technique and one example for each step.
-Model Answer: 7-point list with 1-line technique & 1-line example per step.
+   Concrete example (E-commerce): show mapping — cleaning → integrate CRM + transactions → select active customers → transform to RFM → PCA/feature selection → cluster (k-means) → association mining (Apriori) per cluster → evaluate lift & significance → present top-10 actionable rules in dashboard.
+   Exam Q (10 marks): Explain the 7 KDD steps and give one technique and one example for each step.
+   Model Answer: 7-point list with 1-line technique & 1-line example per step.
 
 ## ৩. KDD ৭ ধাপ — বিশদ + টেকনিক + উদাহরণ
 
 ধাপসমূহ ও ব্যাখ্যা:
+
 1. Data Cleaning: মিসিং ভ্যালু ইম্পুট (mean/median/mode বা k-NN), noise কমানো (smoothing/binning), আউটলার চিহ্নিতকরণ (z-score, IQR)।
 2. Data Integration: স্কিমা মিলানো, entity resolution (এক কাস্টমার বিভিন্ন ID), কনফ্লিক্ট সমাধান, ডুপ্লিকেট রিমুভ।
 3. Data Selection: প্রাসঙ্গিক এট্রিবিউট/ইনস্ট্যান্স/সময় বাছাই (যেমন শেষ ১২ মাস)।
@@ -68,9 +70,9 @@ Model Answer: 7-point list with 1-line technique & 1-line example per step.
 5. Data Mining: অ্যালগরিদম নির্বাচন (decision tree, SVM, k-means, Apriori), প্যারামিটার টিউনিং, cross-validation।
 6. Pattern Evaluation: মেট্রিক (accuracy, precision/recall, support/confidence/lift), স্ট্যাটিস্টিকাল টেস্ট (chi-square, p-value), redundant pattern ফিল্টার।
 7. Knowledge Presentation: ভিজ্যুয়ালাইজেশন (বার, লাইন, হিটম্যাপ), রিপোর্ট, রুল লিস্ট, executive summary; মডেল ডেপ্লয় (API, ড্যাশবোর্ড)।
-E-commerce উদাহরণ (ম্যাপিং): ক্লিনিং → CRM+ট্রানজ্যাকশন ইন্টিগ্রেট → active কাস্টমার সিলেকশন → RFM ফিচার → PCA/ফিচার সিলেকশন → কাস্টমার ক্লাস্টারিং (k-means) → প্রতিটি ক্লাস্টারে association mining (Apriori) → lift ও significance যাচাই → টপ-১০ actionable রুল ড্যাশবোর্ডে।
-পরীক্ষা প্রশ্ন (১০ মার্ক): KDD ৭ ধাপ ব্যাখ্যা করো ও প্রতিটি ধাপের জন্য ১টি পদ্ধতি ও ১টি উদাহরণ বলো।
-মডেল উত্তর: সাতটি ধাপ ক্রমানুসারে, প্রতিটির জন্য ১ লাইনের টেকনিক ও ১ লাইনের উদাহরণ।
+   E-commerce উদাহরণ (ম্যাপিং): ক্লিনিং → CRM+ট্রানজ্যাকশন ইন্টিগ্রেট → active কাস্টমার সিলেকশন → RFM ফিচার → PCA/ফিচার সিলেকশন → কাস্টমার ক্লাস্টারিং (k-means) → প্রতিটি ক্লাস্টারে association mining (Apriori) → lift ও significance যাচাই → টপ-১০ actionable রুল ড্যাশবোর্ডে।
+   পরীক্ষা প্রশ্ন (১০ মার্ক): KDD ৭ ধাপ ব্যাখ্যা করো ও প্রতিটি ধাপের জন্য ১টি পদ্ধতি ও ১টি উদাহরণ বলো।
+   মডেল উত্তর: সাতটি ধাপ ক্রমানুসারে, প্রতিটির জন্য ১ লাইনের টেকনিক ও ১ লাইনের উদাহরণ।
 
 ## 4. Data Warehouses — Full explanation + schema + ETL details
 
@@ -111,6 +113,7 @@ Discrimination (contrast set mining): লক্ষ্য ও কনট্রা�
 ## 6. Associations and Correlations — Full math, examples, interpretation
 
 Association Rules (Transactions):
+
 - Support(A∪B) = count(A and B)/N.
 - Confidence(A→B) = support(A∪B)/support(A) = P(B)
 
@@ -124,12 +127,11 @@ Association Rules (Transactions):
 | Example: Bread → Butter.                | Example: Height increases with weight.           |
 | বাংলায়: পণ্যগুলো একসাথে কীভাবে কেনা হয়। | বাংলায়: দুই ভেরিয়েবল একসাথে কীভাবে পরিবর্তিত হয়। |
 
-
 ## 7. Are All Patterns Interesting? — Measures & statistical tests
 
 Short answer: No. Many discovered patterns are trivial, redundant, or spurious. Need interestingness evaluation.
 Objective Measures: support, confidence, lift, chi-square (test independence), information gain, conviction.
-Chi-square (brief math): build contingency table for presence/absence of A and B, compute expected counts under independence: E = (row_total * col_total)/N. χ² = Σ (O−E)²/E. Compare to χ² critical value (df=1 usually) or compute p-value. Large χ² → reject independence.
+Chi-square (brief math): build contingency table for presence/absence of A and B, compute expected counts under independence: E = (row_total \* col_total)/N. χ² = Σ (O−E)²/E. Compare to χ² critical value (df=1 usually) or compute p-value. Large χ² → reject independence.
 Subjective Measures: novelty, usefulness, actionability, surprisingness, simplicity.
 Example of uninteresting rule: If item X is in nearly all transactions (very high support), rules X→Y may be trivially true; or rule involving attributes that are derived/duplicate.
 Exam Q (5 marks): Why not all patterns are interesting? Provide 2 objective and 2 subjective measures and explain chi-square briefly.
@@ -139,7 +141,7 @@ Model Answer: short paragraph + measures + χ² explanation.
 
 সংক্ষেপে: না। অনেক প্যাটার্ন তুচ্ছ, পুনরাবৃত্তি বা স্পারিওস হতে পারে; তাই interestingness মূল্যায়ন জরুরি।
 Objective মাপ: support, confidence, lift, chi-square (ইনডিপেনডেন্স টেস্ট), information gain, conviction।
-Chi-square (সংক্ষেপ গণিত): A ও B এর উপস্থিতি/অনুপস্থিতি নিয়ে contingency table তৈরি করো; independence ধরে expected count E = (row_total * col_total)/N; χ² = Σ (O−E)²/E; বড় χ² মানে independence ঝেড়ে ফেলা যায়।
+Chi-square (সংক্ষেপ গণিত): A ও B এর উপস্থিতি/অনুপস্থিতি নিয়ে contingency table তৈরি করো; independence ধরে expected count E = (row_total \* col_total)/N; χ² = Σ (O−E)²/E; বড় χ² মানে independence ঝেড়ে ফেলা যায়।
 Subjective মাপ: novelty (নতুনত্ব), usefulness (উপযোগিতা), actionability (ব্যবহারে আসবে কি না), surprisingness, simplicity।
 অপ্রয়োজনীয় রুল উদাহরণ: কোনো আইটেম X সব ট্রানজ্যাকশনে থাকলে X→Y রুল তুলনামূলকভাবে তুচ্ছ।
 পরীক্ষা প্রশ্ন (৫ মার্ক): কেন সব প্যাটার্নই interesting নয়? ২টি objective ও ২টি subjective measure বলো; chi-square সংক্ষেপে ব্যাখ্যা করো।
@@ -171,8 +173,8 @@ Active Learning: মডেল সবচেয়ে তথ্যবহুল উদ
 6. Dynamic/Streaming data & concept drift: models become stale; mitigation: online learning, adaptive windows, drift detection.
 7. Imbalanced data: minority class rare; mitigation: resampling (oversample, SMOTE), cost-sensitive learning, appropriate metrics (precision/recall, ROC).
 8. Interpretability: complex models (deep nets) hard to explain; mitigation: use explainable models (decision trees, LIME/SHAP for explanations).
-Exam Q (8 marks): Describe any four major issues and propose mitigations.
-Model Answer: pick four, ২–৩ লাইন সমস্যা + ১–২ mitigation per issue.
+   Exam Q (8 marks): Describe any four major issues and propose mitigations.
+   Model Answer: pick four, ২–৩ লাইন সমস্যা + ১–২ mitigation per issue.
 
 ## ৯. ডাটা মাইনিং-এর প্রধান সমস্যা — সম্পূর্ণ তালিকা, বিশ্লেষণ ও প্রতিকার
 
@@ -190,31 +192,33 @@ Model Answer: pick four, ২–৩ লাইন সমস্যা + ১–২ m
 ## Quick Exam-Ready Question Bank (covering all above topics) — with brief model answers
 
 Short Qs (2–4 marks):
+
 - Define data mining. (1–2 lines)
 - What is OLAP? Name two OLAP operations. (roll-up, drill-down)
 - List KDD 7 steps in order.
 - Define support and confidence.
 - What is difference between association and correlation?
-Long Qs (8–10 marks):
+  Long Qs (8–10 marks):
 - Explain KDD steps 7-point with an e-commerce pipeline and one technique per step.
 - Compare OLAP and OLTP and show star schema for sales.
 - Given transactions (10 rows) compute support/confidence/lift and interpret.
-Problem Q (math/computation):
+  Problem Q (math/computation):
 - Given contingency table, compute chi-square and conclude independence at α=0.05.
-Model Answers: Provide concise bullet answers or stepwise computations—(I'll generate specific mock problems + full solutions on request).
+  Model Answers: Provide concise bullet answers or stepwise computations—(I'll generate specific mock problems + full solutions on request).
 
 ## দ্রুত পরীক্ষার প্রশ্ন ব্যাংক (উপরের সব টপিক কভার করে) — সংক্ষিপ্ত মডেল উত্তরসহ
 
 সংক্ষিপ্ত প্রশ্ন (২–৪ মার্ক):
+
 - Data mining সংজ্ঞা বলো। (১–২ লাইন)
 - OLAP কী? দুটি OLAP অপারেশন বলো। (roll-up, drill-down)
 - KDD ৭ ধাপ ক্রমানুসারে বলো।
 - Support ও confidence কী? সংজ্ঞা বলো।
 - Association ও correlation পার্থক্য বলো।
-দীর্ঘ প্রশ্ন (৮–১০ মার্ক):
+  দীর্ঘ প্রশ্ন (৮–১০ মার্ক):
 - KDD ৭ ধাপ ব্যাখ্যা করো ও e-commerce pipeline এ প্রতিটি ধাপের উদাহরণ দাও।
 - OLAP ও OLTP তুলনা করো এবং sales-এর star schema দেখাও।
 - দেওয়া ১০টি ট্রানজ্যাকশন থেকে support/confidence/lift গণনা করো ও ব্যাখ্যা করো।
-গণিত/প্রব্লেম প্রশ্ন:
+  গণিত/প্রব্লেম প্রশ্ন:
 - প্রদত্ত contingency table থেকে chi-square গণনা করে α=0.05 এ independence সিদ্ধান্ত নাও।
-মডেল উত্তর: সংক্ষিপ্ত বুলেট বা ধাপে ধাপে গণনা—(তুমি চাইলে আমি নির্দিষ্ট উদাহরণ + পূর্ণ গণনা তৈরি করে দেব)।
+  মডেল উত্তর: সংক্ষিপ্ত বুলেট বা ধাপে ধাপে গণনা—(তুমি চাইলে আমি নির্দিষ্ট উদাহরণ + পূর্ণ গণনা তৈরি করে দেব)।
